@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Circle,FeatureGroup,LayersControl,Map, CircleMarker, TileLayer,Tooltip,Marker,Popup,GeoJSON } from "react-leaflet";
-import {iconPerson} from "./icon.js"
 import worldGeoJSON from 'geojson-world-map';
 import "leaflet/dist/leaflet.css";
 import data from "./cities"
@@ -75,14 +74,14 @@ this.setState({modcountries:myarray})
 const {modcountries}=this.state
 console.log(worldGeoJSON)    
     return (
-   <div>
+   
       
 
-      <Map center={[20, 27.505]} style={{ height: "600px", margin:"auto",width: "70%" }}
+      <Map center={[20, 27.505]} style={{ height: "630px", margin:"auto",width: "100%" }}
           zoom={2}  >
                <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" noWrap="true"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
         />
  
 
@@ -119,7 +118,6 @@ console.log(worldGeoJSON)
  </Map>
 
 
-</div>
     )
 
   }
